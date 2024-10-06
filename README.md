@@ -1,11 +1,13 @@
 # modern-python-template
 
-This ptoject serves as a template for modern python libraries.
+This project serves as a template for modern python libraries.
 The following is already configured:
 - [uv](https://docs.astral.sh/uv/) as a project manager
 - testing with [pytest](https://docs.pytest.org/en/stable/)
 - linting with [flake8](https://flake8.pycqa.org/en/latest/)
-- documentation
+- [mypy](https://mypy.readthedocs.io/en/stable/) for static type checking
+- [nix](./shell.nix) development environment
+- documentation with [sphinx](https://www.sphinx-doc.org/en/master/)
 - directory structure
 
 
@@ -38,7 +40,8 @@ uvx pre-commit
 
 Documentation:
 ```bash
-uv run pydoc
+source .venv/bin/activate
+make html
 ```
 
 ### uv usage

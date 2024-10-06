@@ -12,6 +12,8 @@ dependencies = [
     "pytest-cov>=5.0.0",
     "pytest-randomly>=3.15.0",
     "pytest>=8.3.3",
+    "sphinx-rtd-theme>=2.0.0",
+    "sphinx>=8.0.2",
 ]
 
 [tool.uv.pip]
