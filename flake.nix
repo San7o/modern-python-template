@@ -27,11 +27,13 @@
           packages = with pkgsFor.${system}; [
             gcc14                   # compiler
             stdenv.cc.cc.lib
-            python312               # python 3.12 (stble)
+            python312               # python 3.12 (stable)
             python312Packages.uv    # Python project manager
 
             # need those for numpy
             glib
+            libz
+            zlib
             # You need the following only if you are on wayland
             xorg.libX11
             xorg.libxcb
@@ -44,7 +46,7 @@
               zsh
           '';
 
-          LD_LIBRARY_PATH="${pkgsFor.${system}.libz.dev}:${pkgsFor.${system}.stdenv.cc.cc.lib}/lib";
+          LD_LIBRARY_PATH="${pkgsFor.${system}.libz}/lib:${pkgsFor.${system}.stdenv.cc.cc.lib}/lib:${pkgsFor.${system}.zlib}/lib";
           CMAKE_CXX_COMPILER="${pkgsFor.${system}.gcc14}/bin/:${pkgsFor.${system}.clang_18}/bin/";
         };
     });

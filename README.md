@@ -44,6 +44,15 @@ source .venv/bin/activate
 make html
 ```
 
+Use jupyter notebook in the virtual environment:
+```bash
+source .venv/bin/activate
+ipython kernel install --user --name=venv
+uvx jupyter lab
+```
+And you can select the "venv" kernel inside jupyter ui.
+
+
 ### uv usage
 Init a project
 ```bash
