@@ -8,6 +8,7 @@ The following is already configured:
 - [mypy](https://mypy.readthedocs.io/en/stable/) for static type checking
 - [nix](./shell.nix) development environment
 - documentation with [sphinx](https://www.sphinx-doc.org/en/master/)
+- jupyter notebook
 - directory structure
 
 
